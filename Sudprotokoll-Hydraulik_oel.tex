@@ -1,0 +1,173 @@
+\documentclass[12pt,oneside,a4paper]{scrartcl}
+%Einstellungen der Seitenraender
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[pdftex]{graphicx}
+
+%Zum Erstellen von Diagrammen
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usepackage{bigstrut}
+
+%Hyperlinks innerhalb des PDF Dokuments
+\usepackage[bookmarks,
+ngerman,
+pageanchor,
+hyperindex,
+hidelinks,
+pdffitwindow,
+pdftitle={Sudprotokoll: Pale Ale / Hydraulik-\O{}l},
+pdfauthor={Stephan Mertens},
+]{hyperref}
+\usepackage{bookmark}
+
+%um text einzufaerben
+\usepackage{color}
+
+%tabular zeug
+\usepackage{dcolumn}
+
+% Fuer zusaaetzliche Zeichen
+\usepackage{textcomp}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+\begin{document}
+%Header
+	\begin{minipage}[c]{0.70\textwidth}
+		\section*{\hspace{-.4cm}Sudprotokoll: Pale Ale / Hydraulik-\O{}l}
+	\end{minipage}
+	\begin{minipage}[c]{0.29\textwidth}
+		\subsection*{am 26. August 2016}
+	\end{minipage}
+	\rule{\textwidth}{1pt}
+%
+\subsection*{Zutaten}
+%
+%Schuettung
+\paragraph{Schüttung:}
+	\begin{tabular}[t]{m{8cm} m{2cm} m{1cm}}
+		Pale Ale Malt & 0,5 & kg \bigstrut\\
+		Münchner Malz & 1 & kg \bigstrut\\\hline
+		Gesamtschüttung & 1,5 & kg\bigstrut
+	\end{tabular}\\
+
+\vspace{.25cm}
+\hspace{1cm}Angestrebte Stammwürze: 11,5 °P
+%
+%Hopfung
+\paragraph{Hopfung:}
+	\begin{tabular}[t]{m{2.5cm} m{5cm} m{0.5cm} m{1cm} m{0.5cm} m{1cm}}
+		Bitterhopen: & Magnum & 8 & g &  & 15\%$\alpha$ \\
+		Aromahopfen: & Simcoe & 15 & g &  &\%$\alpha$
+	\end{tabular}\\
+
+\vspace{.25cm}
+\hspace{1cm}Errechnete Bittere:  IBU
+%
+%Hefe
+\paragraph{Hefe:}
+	Safale US-05
+
+\onehalfspacing{
+%
+%Sudverlauf
+\subsection*{Sudverlauf - Infusionsverfahren}	
+%
+%Maischen
+\paragraph{Maischen:}
+	\begin{tabbing}\hspace{1cm} \=
+		\hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> 7l vorlegen bei 64$^\circ C$\\
+		\> \textit{Maltose-/$\beta$-Amylaserast} für 45 Minuten von  Uhr.\\
+		\> \> Aufheizen auf 72$^\circ C$.\\
+		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von  Uhr.\\
+		\> \> \> Jodprobe: \> \> \Square \ positiv \> \> \CheckedBox \ negativ\\
+		\> \> Aufheizen auf 78$^\circ C$.\\\\
+		%
+		\> Kommentar: \>\>\>\\
+	\end{tabbing}
+%
+%Läutern
+\paragraph{Läutern:} von  Uhr.
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \kill
+		\> 1l Wasser vorlegen.\\
+		\> \> 1. Nachguss: \> \> 7 l\\
+		\> \> 2. Nachguss: \> \> 5 l\\
+		\> \> \> Aufhacken: \> \> \CheckedBox \ ja \> \> \Square \ nein\\
+		%\> \> 3. Nachguss: \> \> 2 l\\
+		\> Würze: \> \> \> $^\circ P$ \> bei \>$^\circ C$ \> $\Rightarrow$ \> $^\circ P$\\
+		\> Glattwasser: \> \> \>$^\circ P$ \> bei \> $^\circ C$ \> $\Rightarrow$ \> 6,5$^\circ P$\\\\
+		\> Kommentar: \>\>\> \\
+	\end{tabbing}
+%
+%Würzekochung
+\paragraph{Würzekochung:} für 80 Minuten von  Uhr.\\
+%Whirpool
+\paragraph{Whirpoolrast:} von  Uhr.
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> Kommentar: \>\>\> \\
+		\> \> \> ca. $^\circ P$ \> \> bei \> $^\circ C$ \> $\Rightarrow$ \> $^\circ P$\\
+		\> \> Verdünnen: \> \> \> \> \> ($l \cdot$$ ^\circ P)/$($^\circ P)= l$\\
+		\> \> Sudhausausbeute: \> \> \> \> \>  \% mit l\\
+		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \% Vol.
+	\end{tabbing}
+%
+%Hefegabe
+\paragraph{Hefegabe} und $O_2$-Gabe um  Uhr.
+%
+\subsection*{Gärverlauf}
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> Angestellt am Samstag, den  um  Uhr.\\
+		\> \> ungefähre Gärtemperatur  $^\circ C$.\\
+		\> Erste Kräusen am Samstag,  Tag Nr. .\\
+		\> \> ungefähre Gärtemperatur $^\circ C$.\\
+		\> Kräusen fallen zusammen am Mittwoch, Tag Nr. .\\
+		\> \> ungefähre Gärtemperatur $^\circ C$.\\
+		\> Gärung beendet am Freitag, Tag Nr. .\\
+		\> \> ungefähre Gärtemperatur $^\circ C$.
+	\end{tabbing}
+%
+\subsection*{Schlauchen}
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> Samstag, den  um  Uhr.\\
+		\> Zuckergabe:  g/l\\
+		\> Gesamtabfüllung: \> \> \> \>  \> 0,5l Flasche\\
+		\> \> \> \> \>  \> 0,75l Flasche\\
+		\\
+		\> Kommentar: \>\>\>\\
+	\end{tabbing}
+%
+\subsection*{Verkostet}
+\begin{tabbing}
+	\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+	\> Kommentar: \>\>\> \\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\		
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}
+\end{tabbing}}
+\end{document}
