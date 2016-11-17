@@ -12,6 +12,7 @@
 \usepackage{pgfplots}
 
 \usepackage{bigstrut}
+\usepackage{siunitx}
 
 %Hyperlinks innerhalb des PDF Dokuments
 \usepackage[bookmarks,
@@ -20,7 +21,7 @@ pageanchor,
 hyperindex,
 hidelinks,
 pdffitwindow,
-pdftitle={Sudprotokoll: Imperial Stout/Too Old For That S**t},
+pdftitle={Sudprotokoll: Imperial Kaffee-Oatmeal-Stout},
 pdfauthor={Stephan Mertens},
 ]{hyperref}
 \usepackage{bookmark}
@@ -39,10 +40,10 @@ pdfauthor={Stephan Mertens},
 \begin{document}
 %Header
 	\begin{minipage}[c]{0.70\textwidth}
-		\section*{\hspace{-.4cm}Sudprotokoll: Imperial Stout/{\large too old for that S**t} }
+		\section*{\hspace{-.4cm}Sudprotokoll: Imperial Kaffee-Oatmeal-Stout }
 	\end{minipage}
 	\begin{minipage}[c]{0.29\textwidth}
-		\subsection*{am 28. März 2016}
+		\subsection*{am 19. Nov. 2016}
 	\end{minipage}
 	\rule{\textwidth}{1pt}
 %
@@ -51,26 +52,26 @@ pdfauthor={Stephan Mertens},
 %Schuettung
 \paragraph{Schüttung:}
 	\begin{tabular}[t]{m{8cm} m{2cm} m{1cm}}
-		Pilsener Malz & 3,6 & kg \bigstrut\\
-		Münchner Malz & 1 & kg \bigstrut\\
-		Cara Münch & 0,3 & kg \bigstrut\\
-		Haferflocken & 0,08 & kg \bigstrut\\ \hline
-		Hauptschüttung & 5 & kg \bigstrut\\
+		Münchner Malz & \num{2,55}  & kg \bigstrut\\
+		Paleale Malt & \num{1,45} & kg \bigstrut\\
+		Haferflocken & \num{0,3} & kg \bigstrut\\
+		Sauermalz & \num{0,055} & kg \bigstrut\\ \hline
+		Hauptschüttung & \num{4,355} & kg \bigstrut\\
 		&&\\
-		Röstmalz & 0,25 & kg \bigstrut\\\hline
-		Zweitschüttung & 0,25 & kg \bigstrut\\
+		Espressopulver & \num{0,1} & kg \bigstrut\\\hline
+		Zweitschüttung & \num{0,1} & kg \bigstrut\\
 		&&\\\hline\hline
-		Gesamtschüttung & 5,25 & kg\bigstrut
+		Gesamtschüttung & \num{4,455} & kg\bigstrut
 	\end{tabular}\\
 
 \vspace{.25cm}
-\hspace{1cm}Angestrebte Stammwürze: 22 °P
+\hspace{1cm}Angestrebte Stammwürze: 20\,ggrraaddP
 %
 %Hopfung
 \paragraph{Hopfung:}
-	\begin{tabular}[t]{m{2.5cm} m{5cm} m{0.5cm} m{1cm} m{0.5cm} m{1cm}}
-		Bitterhopen: & Cascade & 30 & g & 8,5 & \% $\alpha$ \\
-		Aromahopfen: & Citra & 30 & g & 13,1 &  \% $\alpha$
+	\begin{tabular}{l l c c c c}
+		Bitterhopfen & Magnum &  &  &  & \% $\alpha$ \\
+		Aromahopfen: & Tettnanger &  &  &  &  \% $\alpha$
 	\end{tabular}\\
 
 \vspace{.25cm}
@@ -80,41 +81,34 @@ pdfauthor={Stephan Mertens},
 \paragraph{Hefe:}
 	Safbrew T-58
 
-\onehalfspacing{
+%\onehalfspacing{
 %
 %Sudverlauf
 \subsection*{Sudverlauf - Infusionsverfahren}	
-%
+
 %Maischen
 \paragraph{Maischen:}
 	\begin{tabbing}\hspace{1cm} \=
 		\hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> 6,5l vorlegen bei 50$^\circ C$.\\
+		\> \SI{7}{\liter} vorlegen bei \SI{50}{\celsius}.\\
 		%\> \> Aufheizen auf 35$^ \circ C$.\\
 		%\> \textit{Gummi/Glucanaserast} für Minuten von - Uhr.\\
 		%\> \> Aufheizen auf 44$^\circ C$.\\
 		%\> \textit{Ferulasäurerast} für Minuten von - Uhr.\\
 		%\> \> Aufheizen auf 52$^\circ C$.\\
-		\> \textit{Eiweißrast} für 20 Minuten von 13:00 - 13:30 Uhr.\\
-		\> \> Aufheizen auf 64$^\circ C$\\
-		\> \textit{Maltose-/$\beta$-Amylaserast} für 30 Minuten von 13:45 - 14:15 Uhr.\\
-		\> \> Aufheizen auf 72$^\circ C$.\\
-		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von 14:40 - 20:10 Uhr.\\
-		\> \> Zugabe der zweiten Schüttung.\\
-		\> \> \> Jodprobe: \> \> \CheckedBox \ positiv \> \> \Square \ negativ\\
-		\> \> Aufheizen auf 78$^\circ C$.\\\\
+		\> \textit{Eiweißrast} für 20 Minuten von -  Uhr.\\
+		\> \> Aufheizen auf \SI{64}{\celsius}\\
+		\> \textit{Maltose-/$\beta$-Amylaserast} für 30 Minuten von - Uhr.\\
+		\> \> Aufheizen auf \SI{72}{\celsius}.\\
+		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von - Uhr.\\
+		\> \> \> Jodprobe: \> \> \Square \ positiv \> \> \Square \ negativ\\
+		\> \> Aufheizen auf \SI{78}{\celsius}.\\\\
 		%
-		\> Kommentar: \>\>\> Totale Müslimaische. Eingemaischt mit Quirl $\Rightarrow$ viel Sauerstoffeintrag,\\
-		\> \> ca. 0,5l kochendes Wasser hinterher gekippt. Ähndelt jetzt einer Flüssigkeit. Rast 1\\ 
-		\> \> direkt überhitzt auf etw 55$^\circ C$. Temperaturmessung sehr schwer, da in der Müslimai-\\
-		\> \> sche stark geschichtete Temperaturverteilung. (17:30) Thermometer war unten mit \\
-		\> \> Malz verstopft, deswegen kann nicht gesagt werden ob zwischenzeitlich überhitzt wur-\\
-		\> \> de, Maische schmeckt aber sehr süß. Zwischenzeitlich wieder etwas Wasser nachge-\\
-		\> \> kippt. Keine Zeit mehr zu warten.
+		\> Kommentar: \>\>\> \\
 	\end{tabbing}
-%
+
 %Läutern
-\paragraph{Läutern:} von 20:15 - 22:30 Uhr.
+\paragraph{Läutern:} von - Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \kill
 		\> 1l Wasser vorlegen.\\
@@ -122,29 +116,25 @@ pdfauthor={Stephan Mertens},
 		\> \> 2. Nachguss: \> \> 3 l\\
 		\> \> \> Aufhacken: \> \> \Square \ ja \> \> \Square \ nein\\
 		\> \> 3. Nachguss: \> \> 2 l\\
-		\> Würze: \> \> \> 17$^\circ P$ \> bei \> 67$^\circ C$ \> $\Rightarrow$ \> 22$^\circ P$\\
-		\> Glattwasser: \> \> \> 10$^\circ P$ \> bei \> 56$^\circ C$ \> $\Rightarrow$ \> 14$^\circ P$\\\\
-		\> Kommentar: \>\>\> Zum Abmaischen direkt den ersten Nachguss gegeben und umgerührt.\\
-		\> \> Dichte feine Trübung, Treberkuchen nach 1.5l dicht $\Rightarrow$ aufhacken. Sieb verstopft, zu\\
-		\> \> fein geschrotet. Etwa 2.5l später ein weiteres mal aufhacken. Kurz vor Ende musste \\
-		\> \> nochmals aufgehackt werden. Viel \glqq gutes\grqq\ Glattwasser, deswegen wird ein zweiter \\
-		\> \> Topf gefüllt. ca. 12l Kochwürze.
+		\> Würze: \> \> \> \,ggrraaddP\> bei \> \SI{666}{\celsius} \> $\Rightarrow$ \> \,ggrraaddP\\
+		\> Glattwasser: \> \> \> \,ggrraaddP \> bei \> \SI{666}{\celsius} \> $\Rightarrow$ \> \,ggrraaddP\\\\
+		\> Kommentar: \>\>\> \\
 	\end{tabbing}
-%
+
 %Würzekochung
-\paragraph{Würzekochung:} für 90 Minuten von 22:40 - 0:10 Uhr.
+\paragraph{Würzekochung:} für 90 Minuten von - Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Kommentar: \> \> \> Zum Schluss nur noch ein Topf gehabt (zusammengekippt)
+		\> Kommentar: \> \> \> \\
 	\end{tabbing}
-%
+
 %Whirpool
-\paragraph{Whirpoolrast:} von 0:15 - 0:30 Uhr.
+\paragraph{Whirpoolrast:} von - Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Kommentar: \>\>\> NT. Trubkegel sehr groß, evtl. längere Rast. Würze lief schön klar. \\
-		\> \> \> ca. 22$^\circ P$ \> \> bei \> 62$^\circ C$ \> $\Rightarrow$ \> 26$^\circ P$\\
-		\> \> Verdünnen: \> \> \> \> \> (8,5$l \cdot$26$ ^\circ P)/$(22$^\circ P)=$ 10$l$\\
+		\> Kommentar: \>\>\>  \\
+		\> \> \> ca. \,ggrraaddP \> \> bei \> \SI{666}{\celsius} \> $\Rightarrow$ \> \,ggrraaddP\\
+		\> \> Verdünnen: \> \> \> \> \> $(\SI{666}{\liter} \cdot \,^\circ P)/(\,^\circ P)= \SI{666}{\liter}$\\
 		\> \> Sudhausausbeute: \> \> \> \> \>  40\% mit 10l\\
 		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> 9,5\% Vol.
 	\end{tabbing}
@@ -155,14 +145,14 @@ pdfauthor={Stephan Mertens},
 \subsection*{Gärverlauf}
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Angestellt am Dienstag, den \today \ um 6:25 Uhr.\\
-		\> \> ungefähre Gärtemperatur 20 $^\circ C$.\\
+		\> Angestellt am , den  \ um  Uhr.\\
+		\> \> ungefähre Gärtemperatur \SI{666}{\celsius}.\\
 		\> Erste Kräusen am \hspace{4cm}, Tag Nr.\hspace{2.5cm} .\\
-		\> \> ungefähre Gärtemperatur \hspace{2.5cm}$^\circ C$.\\
+		\> \> ungefähre Gärtemperatur \SI{666}{\celsius}.\\
 		\> Kräusen fallen zusammen am \hspace{4cm}, Tag Nr. \hspace{2.5cm}.\\
-		\> \> ungefähre Gärtemperatur \hspace{2.5cm}$^\circ C$.\\
+		\> \> ungefähre Gärtemperatur \SI{666}{\celsius}.\\
 		\> Gärung beendet am \hspace{4cm}, Tag Nr. \hspace{2.5cm}.\\
-		\> \> ungefähre Gärtemperatur \hspace{2.5cm}$^\circ C$.
+		\> \> ungefähre Gärtemperatur \SI{666}{\celsius}.
 	\end{tabbing}
 %
 \subsection*{Schlauchen}
@@ -202,5 +192,5 @@ pdfauthor={Stephan Mertens},
 	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
 	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
 	\> \>  \rule[-0.2cm]{15.3cm}{1pt}
-\end{tabbing}}
+\end{tabbing}
 \end{document}
