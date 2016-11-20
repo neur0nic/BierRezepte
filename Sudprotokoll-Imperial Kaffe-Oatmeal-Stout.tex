@@ -13,6 +13,10 @@
 
 \usepackage{bigstrut}
 \usepackage{siunitx}
+\sisetup{
+	locale = DE ,
+	per-mode = symbol
+}
 
 %Hyperlinks innerhalb des PDF Dokuments
 \usepackage[bookmarks,
@@ -58,7 +62,7 @@ pdfauthor={Stephan Mertens},
 		Sauermalz & \num{0,055} & kg \bigstrut\\ \hline
 		Hauptschüttung & \num{4,355} & kg \bigstrut\\
 		&&\\
-		Espressopulver & \num{0,1} & kg \bigstrut\\\hline
+		Espressopulver (Lavazza) & \num{0,1} & kg \bigstrut\\\hline
 		Zweitschüttung & \num{0,1} & kg \bigstrut\\
 		&&\\\hline\hline
 		Gesamtschüttung & \num{4,455} & kg\bigstrut
@@ -69,13 +73,13 @@ pdfauthor={Stephan Mertens},
 %
 %Hopfung
 \paragraph{Hopfung:}
-	\begin{tabular}{l l c c c c}
-		Bitterhopfen & Magnum &  & \num{24.5} &  \si{\gram}& \SI{12,2}{\percent} $\alpha$ \\
-		Aromahopfen: & Tettnanger &  & \num{15} & \si{\gram} & \SI{3,7}{\percent}$\alpha$
+	\begin{tabular}[t]{l l c r r r}
+		Bitterhopfen & Magnum &  & \num{10} &  \si{\gram}& \SI{12,2}{\percent}\,$\alpha$ \\
+		Aromahopfen: & Tettnanger &  & \num{30} & \si{\gram} & \SI{3,7}{\percent}\,$\alpha$
 	\end{tabular}\\
 
 \vspace{.25cm}
-\hspace{1cm}Errechnete Bittere: 50\,IBU
+\hspace{1cm}Errechnete Bittere: 30\,IBU
 %
 %Hefe
 \paragraph{Hefe:}
@@ -90,7 +94,7 @@ pdfauthor={Stephan Mertens},
 \paragraph{Maischen:}
 	\begin{tabbing}\hspace{1cm} \=
 		\hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> \SI{7,5}{\liter} vorlegen bei \SI{50}{\celsius}.\\
+		\> \SI{7,5}{\litre} vorlegen bei \SI{50}{\celsius}.\\
 		%\> \> Aufheizen auf 35$^ \circ C$.\\
 		%\> \textit{Gummi/Glucanaserast} für Minuten von - Uhr.\\
 		%\> \> Aufheizen auf 44$^\circ C$.\\
@@ -98,50 +102,69 @@ pdfauthor={Stephan Mertens},
 		%\> \> Aufheizen auf 52$^\circ C$.\\
 		\> \textit{Eiweißrast} für 20 Minuten von 13:32 - 13:52 Uhr.\\
 		\> \> Aufheizen auf \SI{64}{\celsius}\\
-		\> \textit{Maltose-/$\beta$-Amylaserast} für 30 Minuten von 14:08 - Uhr.\\
+		\> \textit{Maltose-/$\beta$-Amylaserast} für 30 Minuten von 14:08 - 14:38 Uhr.\\
 		\> \> Aufheizen auf \SI{72}{\celsius}.\\
-		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von 14:48 - Uhr.\\
-		\> \> \> Jodprobe: \> \> \Square \ positiv \> \> \Square \ negativ\\
+		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von 14:48 - 18:00 Uhr.\\
+		\> \> \> Jodprobe: \> \> \CheckedBox \ positiv \> \> \Square \ negativ\\
 		\> \> Aufheizen auf \SI{78}{\celsius}.\\\\
 		%
 		\> Kommentar: \>\>\> Alten Weck-Einmachkocher benutzt. Temperatur mit Thermometer kontrol-\\
-		\>\>\>liert. \\
+		\>\>\>liert. \SI{64}{\celsius} Rast auf \SI{60}{\minute} verlängern. \SI{3}{\hour} bei \SI{72}{\celsius} hat für Verzuckerung nicht ge-\\
+		\>\>\>nügt. Brauerjod, ist sehr alt, vllt funktioniert es nicht mehr.\\
 	\end{tabbing}
 
 %Läutern
-\paragraph{Läutern:} von - Uhr.
+\paragraph{Läutern:} von 18:40 - 19:50 Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \kill
 		\> 1l Wasser vorlegen.\\
-		\> \> 1. Nachguss: \> \> \SI{4,5}{\liter}\\
-		\> \> 2. Nachguss: \> \> \SI{3}{\liter}\\
-		\> \> \> Aufhacken: \> \> \Square \ ja \> \> \Square \ nein\\
-		\> \> 3. Nachguss: \> \> \SI{2}{\liter}\\
-		\> Würze: \> \> \> \,°P\> bei \> \SI{666}{\celsius} \> $\Rightarrow$ \> \,°P\\
-		\> Glattwasser: \> \> \> \,°P \> bei \> \SI{666}{\celsius} \> $\Rightarrow$ \> \,°P\\\\
-		\> Kommentar: \>\>\>  \\
+		\> \> 1. Nachguss: \> \> \> \SI{4,5}{\litre}\\
+		\> \> 2. Nachguss: \> \> \> \SI{3}{\litre}\\
+		\> \> \> Aufhacken: \> \> \CheckedBox \ ja \> \> \Square \ nein\\
+		\> \> 3. Nachguss: \> \> \> \SI{2}{\litre}\\
+		\> Würze: \> \> \> 14\,°P\> bei \> \SI{41}{\celsius} \> $\Rightarrow$ \> \num{15,8}\,°P\\
+		\> \> \> ca. \SI{11}{\litre} ausgeschlagen.\\
+		\> \> \> $\Rightarrow$ bis auf \SI{9}{\litre} einkochen.\\ \\
+		\> Kommentar: \>\>\>Erster Nachguss sofort dazugegeben. Schon beim Vorschießen läuft die Würze\\
+		\>\>\>schlecht. Früh verstopft, aufgehackt bevor der erste Liter geläutert ist. Läuft beschis-\\
+		\>\>\>sen, schon zwei mal aufgehackt bevor der zweite Nachguss kommt. Vllt auch zu fein\\
+		\>\>\>geschrotet. Treberkuchen macht schnell dicht und ist schwer und zäh beim umrühren.\\
+		\>\>\>Treber trockengelaufen, zweiter Nachguss mit ca. \SI{90}{\celsius} zugegeben. dann wieder aufge-\\
+		\>\>\>hackt. Zweiter Nachguss läuft nach kurzer Zeit recht gut. Mit ca. \SI{7}{\litre} den Treber völlig\\
+		\> \> \>trocken laufen gelassen. Ausschlagmenge reicht nicht $\Rightarrow$ dritter Nachguss. Der ist zu \\
+		\> \> \>wenig um Treber zu befeuchten deswegen auf \SI{3,5}{\litre} erhöht. Dritter Nachguss läuft mit\\
+		\> \> \>einer feinen Trübe. Weiterer Jodtest beim Aufheizen ist negativ. Brauerjod scheint\\
+		\> \> \>doch zu funktionieren.\\
 	\end{tabbing}
 
 %Würzekochung
-\paragraph{Würzekochung:} für 90 Minuten von - Uhr.
+\paragraph{Würzekochung:} für 90 Minuten von 20:36 - 22:07 Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Kommentar: \> \> \> \\
+		\> Kommentar: \> \> \> Zu wenig Bitterhopfen mitgenommen, deswegen nur 30\,IBU statt 50\,IBU. Waa-\\
+		\> \> \>ge ist aber ungenau (zählt rückwärts). Weck hat Probleme bei offenenm Deckel zu Ko-\\
+		\> \> \>chen. Topf ist außen sehr heiß. Immer wieder von \glqq Entsaften\grqq\ auf Kochen gestellt (Ko-\\
+		\>\>\>chen kocht nicht) um kein Überlastung der Sicherung zu riskieren. In \SI{90}{\minute} kaum Vo-\\
+		\>\>\>lumen verloren. Kochung auf \glqq Entsaften\grqq\ um \SI{30}{\minute} verlängert. Weck ist aus. Denk\\
+		\>\>\>mal der ist zu warm geworden. Espresso in fünf Teebeuteln in den Whirpool geworfen.\\
 	\end{tabbing}
 
 %Whirpool
-\paragraph{Whirpoolrast:} von - Uhr.
+\paragraph{Whirpoolrast:} von 22:08 - 22:48 Uhr.\\
+
+\hspace{1cm} Zweite Schüttung (in Teebeuteln) in den vollen Whirpool gelegt.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
 		\> Kommentar: \>\>\>  \\
-		\> \> \> ca. \,°P \> \> bei \> \SI{666}{\celsius} \> $\Rightarrow$ \> \,°P\\
-		\> \> Verdünnen: \> \> \> \> \> $(\SI{666}{\liter} \cdot \,^\circ P)/(\,^\circ P)= \SI{666}{\liter}$\\
-		\> \> Sudhausausbeute: \> \> \> \> \>  40\% mit 10l\\
-		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> 9,5\% Vol.
+		\> \> \> ca. 16\,°P \> \> bei \> \SI{51}{\celsius} \> $\Rightarrow$ \> 19\,°P\\
+		\> \> Sudhausausbeute: \> \> \> \> \>  \SI{50}{\percent} mit \SI{10}{\litre}\\
+		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \SI{8,5}{\percent}Vol.\\
+		\>Kommentar: \>\>\>NT. Anstellwürze ist heller als erhofft und hat auf den ersten Eindruck kei-\\
+		\>\>\>ne Espressoaromen. Ansonsten gute Trennung, viel Heißtrub
 	\end{tabbing}
 %
 %Hefegabe
-\paragraph{Hefegabe} und $O_2$-Gabe um 6:25 Uhr.
+\paragraph{Hefegabe} und $O_2$-Gabe um Uhr. 
 %
 \subsection*{Gärverlauf}
 	\begin{tabbing}
