@@ -41,6 +41,8 @@ pdfauthor={Stephan Mertens},
 \usepackage{wasysym}
 \usepackage{marvosym}
 
+\usepackage{changepage}
+
 \begin{document}
 %Header
 	\begin{minipage}[c]{0.70\textwidth}
@@ -87,9 +89,9 @@ pdfauthor={Stephan Mertens},
 
 %\onehalfspacing{
 %
+\pagebreak[3]
 %Sudverlauf
 \subsection*{Sudverlauf - Infusionsverfahren}	
-
 %Maischen
 \paragraph{Maischen:}
 	\begin{tabbing}\hspace{1cm} \=
@@ -105,52 +107,38 @@ pdfauthor={Stephan Mertens},
 		\> \textit{Maltose-/$\beta$-Amylaserast} für 30 Minuten von 14:08 - 14:38 Uhr.\\
 		\> \> Aufheizen auf \SI{72}{\celsius}.\\
 		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von 14:48 - 18:00 Uhr.\\
-		\> \> \> Jodprobe: \> \> \CheckedBox \ positiv \> \> \Square \ negativ\\
-		\> \> Aufheizen auf \SI{78}{\celsius}.\\\\
-		%
-		\> Kommentar: \>\>\> Alten Weck-Einmachkocher benutzt. Temperatur mit Thermometer kon-\\
-		\>\>\>trolliert. \SI{64}{\celsius} Rast auf \SI{60}{\minute} verlängern. \SI{3}{\hour} bei \SI{72}{\celsius} hat für Verzuckerung \\
-		\>\>\>nicht genügt. Brauerjod, ist sehr alt, vllt. funktioniert es nicht mehr.\\
+		\> \> \> Jodprobe: \> \> \CheckedBox \ positiv \> \> \Square \ negativ
 	\end{tabbing}
-
+	\begin{adjustwidth}{2cm}{0cm}
+		\hspace{-1cm}Kommentar: Alten Weck-Einmachkocher benutzt. Temperatur mit Thermometer kontrolliert. \SI{64}{\celsius} Rast auf \SI{60}{\minute} verlängern. \SI{3}{\hour} bei \SI{72}{\celsius} hat für Verzuckerung nicht genügt. Brauerjod, ist sehr alt, vllt. funktioniert es nicht mehr.
+	\end{adjustwidth}
+\pagebreak[3]
 %Läutern
 \paragraph{Läutern:} von 18:40 - 19:50 Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \kill
-		\> 1l Wasser vorlegen.\\
+		\> \SI{1}{\litre} Wasser vorlegen.\\
 		\> \> 1. Nachguss: \> \> \> \SI{4,5}{\litre}\\
 		\> \> 2. Nachguss: \> \> \> \SI{3}{\litre}\\
 		\> \> \> Aufhacken: \> \> \CheckedBox \ ja \> \> \Square \ nein\\
 		\> \> 3. Nachguss: \> \> \> \SI{2}{\litre}\\
 		\> Würze: \> \> \> 14\,°P\> bei \> \SI{41}{\celsius} \> $\Rightarrow$ \> \num{15,8}\,°P\\
 		\> \> \> ca. \SI{11}{\litre} ausgeschlagen.\\
-		\> \> \> $\Rightarrow$ bis auf \SI{9}{\litre} einkochen.\\ \\
-		\> Kommentar: \>\>\>Erster Nachguss sofort dazugegeben. Schon beim Vorschießen läuft die Wür-\\
-		\>\>\>ze schlecht. Früh verstopft, aufgehackt bevor der erste Liter geläutert ist. Läuft beschis-\\
-		\>\>\>sen, schon zwei mal aufgehackt bevor der zweite Nachguss kommt. Vllt. auch zu fein\\
-		\>\>\>geschrotet. Treberkuchen macht schnell dicht und ist schwer und zäh beim umrühren.\\
-		\>\>\>Treber trockengelaufen, zweiter Nachguss mit ca. \SI{90}{\celsius} zugegeben. dann wieder aufge-\\
-		\>\>\>hackt. Zweiter Nachguss läuft nach kurzer Zeit recht gut. Mit ca. \SI{7}{\litre} den Treber völlig\\
-		\> \> \>trocken laufen gelassen. Ausschlagmenge reicht nicht $\Rightarrow$ dritter Nachguss. Der ist zu \\
-		\> \> \>wenig um Treber zu befeuchten deswegen auf \SI{3,5}{\litre} erhöht. Dritter Nachguss läuft mit\\
-		\> \> \>einer feinen Trübe. Weiterer Jodtest beim Aufheizen ist negativ. Brauerjod scheint\\
-		\> \> \>doch zu funktionieren.\\
+		\> \> \> $\Rightarrow$ bis auf \SI{9}{\litre} einkochen.
 	\end{tabbing}
+	\begin{adjustwidth}{2cm}{0cm}
+		\hspace{-1cm}Kommentar: Erster Nachguss sofort dazugegeben. Schon beim Vorschießen läuft die Würze schlecht. Früh verstopft, aufgehackt bevor der erste Liter geläutert ist. Läuft beschissen, schon zwei mal aufgehackt bevor der zweite Nachguss kommt. Vllt. auch zu fein geschrotet. Treberkuchen macht schnell dicht und ist schwer und zäh beim umrühren. Treber trockengelaufen, zweiter Nachguss mit ca. \SI{90}{\celsius} zugegeben. dann wieder aufgehackt. Zweiter Nachguss läuft nach kurzer Zeit recht gut. Mit ca. \SI{7}{\litre} den Treber völlig trocken laufen gelassen. Ausschlagmenge reicht nicht $\Rightarrow$ dritter Nachguss. Der ist zu wenig um Treber zu befeuchten deswegen auf \SI{3,5}{\litre} erhöht. Dritter Nachguss läuft mit einer feinen Trübe. Weiterer Jodtest beim Aufheizen ist negativ. Brauerjod scheint doch zu funktionieren.
+	\end{adjustwidth}
 
 %Würzekochung
+\pagebreak[3]
 \paragraph{Würzekochung:} für 90 Minuten von 20:36 - 22:07 Uhr.
-	\begin{tabbing}
-		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Kommentar: \> \> \> Zu wenig Bitterhopfen mitgenommen, deswegen nur 30\,IBU statt 50\,IBU. Waa-\\
-		\> \> \>ge ist aber ungenau (zählt rückwärts). Weck hat Probleme bei offenem Deckel zu Ko-\\
-		\> \> \>chen. Topf ist außen sehr heiß. Immer wieder von \glqq Entsaften\grqq\ auf Kochen gestellt (Ko-\\
-		\>\>\>chen kocht nicht) um kein Überlastung der Sicherung zu riskieren. In \SI{90}{\minute} kaum Vo-\\
-		\>\>\>lumen verloren. Kochung auf \glqq Entsaften\grqq\ um \SI{30}{\minute} verlängert. Weck ist aus. Denk\\
-		\>\>\>mal der ist zu warm geworden. Deswegen nicht weiter gekocht. Espresso in fünf Tee-\\
-		\>\>\>beuteln in den Whirpool geworfen.\\
-	\end{tabbing}
+	\begin{adjustwidth}{2cm}{0cm}
+		\hspace{-1cm}Kommentar: Zu wenig Bitterhopfen mitgenommen, deswegen nur 30\,IBU statt 50\,IBU. Waage ist aber ungenau (zählt rückwärts). Weck hat Probleme bei offenem Deckel zu Kochen. Topf ist außen sehr heiß. Immer wieder von \glqq Entsaften\grqq\ auf Kochen gestellt (Kochen kocht nicht) um kein Überlastung der Sicherung zu riskieren. In \SI{90}{\minute} kaum Volumen verloren. Kochung auf \glqq Entsaften\grqq\ um \SI{30}{\minute} verlängert. Weck ist aus. Denk mal der ist zu warm geworden. Deswegen nicht weiter gekocht. Espresso in fünf Teebeuteln in den Whirpool geworfen.
+	\end{adjustwidth}
 
 %Whirpool
+\pagebreak[3]
 \paragraph{Whirpoolrast:} von 22:08 - 22:48 Uhr.\\
 
 \hspace{1cm} Zweite Schüttung (in Teebeuteln) in den vollen Whirpool gelegt.
@@ -159,16 +147,16 @@ pdfauthor={Stephan Mertens},
 		\> Kommentar: \>\>\>  \\
 		\> \> \> ca. 16\,°P \> \> bei \> \SI{51}{\celsius} \> $\Rightarrow$ \> 19\,°P\\
 		\> \> Sudhausausbeute: \> \> \> \> \>  \SI{50}{\percent} mit \SI{10}{\litre}\\
-		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \SI{8,5}{\percent}Vol.\\
-		\>Kommentar: \>\>\>NT. Anstellwürze ist heller als erhofft und hat auf den ersten Eindruck kei-\\
-		\>\>\>ne Espressoaromen. Ansonsten gute Trennung, viel Heißtrub. Würze schmeckt mal-\\
-		\>\>\>zig, etwas dumpf, könnte von Kaffee kommen. Bittere kommt stark und kurz, fast\\
-		\>\>\>etwas kräutrig.
+		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \SI{8,5}{\percent}Vol.
 	\end{tabbing}
+	\begin{adjustwidth}{2cm}{0cm}
+		\hspace{-1cm}Kommentar: NT. Anstellwürze ist heller als erhofft und hat auf den ersten Eindruck keine Espressoaromen. Ansonsten gute Trennung, viel Heißtrub. Würze schmeckt malzig, etwas dumpf, könnte von Kaffee kommen. Bittere kommt stark und kurz, fast etwas kräutrig.
+	\end{adjustwidth}
 %
 %Hefegabe
+\pagebreak[3]
 \paragraph{Hefegabe} und $O_2$-Gabe Sonntag um 12:12 Uhr. 
-%
+\pagebreak[3]
 \subsection*{Gärverlauf}
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
@@ -179,7 +167,7 @@ pdfauthor={Stephan Mertens},
 		\> Gärung beendet am Samstag, Tag Nr. 6.\\
 		\> \> ungefähre Gärtemperatur \SI{17}{\celsius}.
 	\end{tabbing}
-%
+\pagebreak[3]
 \subsection*{Schlauchen}
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
@@ -191,15 +179,10 @@ pdfauthor={Stephan Mertens},
 		\>\>vllt. nächstes mal Aufkräusen. Bier über zwei Töpfe gepuffert.
 	\end{tabbing}
 %
-\subsection*{Verkostet}
-\begin{tabbing}
-	\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-	\> Kommentar: \>\>\> Probieren nach dem Schlauchen. Optisch hellbraun mit feiner Trübung.\\
-	\>\>Riecht etwas nach Karamell und etwas würzigem Hopfen. Im Hintergrund ist noch \\
-	\>\>was anderes. Geschmacklich ist es anfangs samtig, dann stark bitter mit einem leicht \\
-	\>\>alkoholischen Abgang. Dazu kommt eine würzige Kopfnote und wenn man drauf ach-\\
-	\>\>tet eine minimale Kaffeenote. Idee fürs nächste Mal: Anstellwürze vom Whirpool \\
-	\>\>durch einen Melittafilter in den Gäreimer füllen (auf Heißoxidation achten).\\
-	\>\>\>\>Probieren am 
-\end{tabbing}
+\subsection*{Verkosten}
+	\begin{adjustwidth}{2cm}{0cm}
+	\hspace{-1cm}Kommentar: Probieren nach dem Schlauchen.\\
+	Optisch hellbraun mit feiner Trübung. Riecht etwas nach Karamell und etwas würzigem Hopfen. Im Hintergrund ist noch was anderes. Geschmacklich ist es anfangs samtig, dann stark bitter mit einem leicht alkoholischen Abgang. Dazu kommt eine würzige Kopfnote und wenn man drauf achtet eine minimale Kaffeenote. Idee fürs nächste Mal: Anstellwürze vom Whirpool durch einen Melittafilter in den Gäreimer füllen (auf Heißoxidation achten).\\
+	Probieren am \\
+	\end{adjustwidth}
 \end{document}
