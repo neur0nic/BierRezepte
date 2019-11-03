@@ -1,0 +1,198 @@
+\documentclass[12pt,oneside,a4paper]{scrartcl}
+%Einstellungen der Seitenraender
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[pdftex]{graphicx}
+
+%Zum Erstellen von Diagrammen
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usepackage{bigstrut}
+
+%Hyperlinks innerhalb des PDF Dokuments
+\usepackage[bookmarks,
+ngerman,
+pageanchor,
+hyperindex,
+hidelinks,
+pdffitwindow,
+pdftitle={Sudprotokoll: Pils},
+pdfauthor={Stephan Mertens},
+]{hyperref}
+\usepackage{bookmark}
+
+%um text einzufaerben
+\usepackage{color}
+
+%tabular zeug
+\usepackage{dcolumn}
+
+% Fuer zusaaetzliche Zeichen
+\usepackage{textcomp}
+\usepackage{wasysym}
+\usepackage{marvosym}
+\usepackage{siunitx}
+\sisetup{locale = DE}
+\DeclareSIUnit\plato{^\circ P}
+\DeclareSIUnit\peralpha{\%\,\alpha}
+\DeclareSIUnit\ibu{IBU}
+\DeclareSIUnit\pervol{\%\,Vol}
+
+\begin{document}
+%Header
+	\begin{minipage}[c]{0.70\textwidth}
+		\section*{\hspace{-.4cm}Sudprotokoll: Dem Franky sein Pils}
+	\end{minipage}
+	\begin{minipage}[c]{0.29\textwidth}
+		\subsection*{am }
+	\end{minipage}
+	\rule{\textwidth}{1pt}
+%
+\subsection*{Zutaten}
+%
+%Schuettung
+\paragraph{Schüttung:}
+	\begin{tabular}[t]{m{8cm} m{2cm} m{1cm}}
+		Pilsener Malz & \num{2,0} & \si{\kilogram} \bigstrut\\
+		Cara Hell & \num{0,2} & \si{\kilogram} \bigstrut\\
+		Sauermalz & \num{0,1} & \si{\kilogram} \bigstrut\\
+		Haferflocken & \num{0,1} & \si{\kilogram} \bigstrut\\\hline\hline
+		Gesamtschüttung & \num{2,4} & \si{\kilogram} \bigstrut
+	\end{tabular}\\
+
+\vspace{.25cm}
+\hspace{1cm}Angestrebte Stammwürze: \SI{13}{\plato}
+%
+%Hopfung
+\paragraph{Hopfung:}
+	\begin{tabular}[t]{m{2.5cm} m{5cm} m{0.5cm} m{1cm} m{0.5cm} m{1cm}}
+		Bitterhopen: & Northern Brewer & \num{18} & \si{\gram} & \num{9,4} & \si{\peralpha} \\
+		Aromahopfen: &  &\num{} & \si{\gram} & \num{} &  \si{\peralpha}
+	\end{tabular}\\
+
+\vspace{.25cm}
+\hspace{1cm}Errechnete Bittere: \SI{}{\ibu}
+%
+%Hefe
+\paragraph{Hefe:}
+	Brewferm Lager
+
+\onehalfspacing{
+%
+%Sudverlauf
+\subsection*{Sudverlauf - Kombinationsverfahren}	
+%
+%Maischen
+\paragraph{Maischen:}
+	\begin{tabbing}\hspace{1cm} \=
+		\hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> \SI{8}{\litre} vorlegen bei \SI{52}{\degreeCelsius}.\\
+		%\> \> Aufheizen auf 35$^ \circ C$.\\
+		%\> \textit{Gummi/Glucanaserast} für Minuten von - Uhr.\\
+		%\> \> Aufheizen auf 44$^\circ C$.\\
+		%\> \textit{Ferulasäurerast} für Minuten von - Uhr.\\
+		%\> \> Aufheizen auf 52$^\circ C$.\\
+		\> \textit{Eiweißrast} für 15 Minuten von ------ Uhr.\\
+		\> \> Aufheizen auf \SI{64}{\degreeCelsius}\\
+		\> \textit{Maltose-/$\beta$-Amylaserast} für 60 Minuten von ------ Uhr.\\
+		\> \> Aufheizen auf \SI{72}{\degreeCelsius}.\\
+		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von ------ Uhr.\\
+%		\> \> Zugabe der zweiten Schüttung.\\
+		\> \> \> Jodprobe: \> \> \Square \ positiv \> \> \Square \ negativ\\
+		\> \> Aufheizen auf \SI{78}{\degreeCelsius}.\\
+		\> Abmaischen um ------ Uhr.\\\\
+		%
+		\> Kommentar: \>\>\> 
+	\end{tabbing}
+%
+%Läutern
+\paragraph{Läutern:} von ------ Uhr.
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \kill
+		\> 1l Wasser vorlegen.\\
+		\> \> 1. Nachguss: \> \> \> \SI{4}{\litre}\\
+		\> \> 2. Nachguss: \> \> \> \SI{2}{\litre}\\
+		\> \> \> Aufhacken: \> \> \Square \ ja \> \> \Square \ nein\\
+		\> \> 3. Nachguss: \> \> \> \SI{2}{\litre}\\
+		\> Würze: \> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\
+		\> Glattwasser: \> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\\\
+		\> Kommentar: \>\>\> 
+	\end{tabbing}
+%
+%Würzekochung
+\paragraph{Würzekochung:} für 60 Minuten von ------ Uhr.
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> Kommentar: \> \> \> 
+	\end{tabbing}
+%
+%Whirpool
+\paragraph{Whirpoolrast:} von ------ Uhr.
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> Kommentar: \>\>\> \\
+		\> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\
+		\> \> Verdünnen: \> \> \> \> \> ($\SI{0}{\litre} \cdot \SI{0}{\plato})/(\SI{0}{\plato})= \SI{0}{\litre}$\\
+		\> \> Sudhausausbeute: \> \> \> \> \> \SI{0}{\percent} mit \SI{10}{\litre}\\
+		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \SI{0}{\pervol}.
+	\end{tabbing}
+%
+%Hefegabe
+\paragraph{Hefegabe} und $O_2$-Gabe um ------ Uhr.
+%
+\subsection*{Gärverlauf}
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> Angestellt am , den \today \ um  Uhr.\\
+		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
+		\> Erste Kräusen am \hspace{4cm}, Tag Nr.\hspace{2.5cm} .\\
+		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
+		\> Kräusen fallen zusammen am \hspace{4cm}, Tag Nr. \hspace{2.5cm}.\\
+		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
+		\> Gärung beendet am \hspace{4cm}, Tag Nr. \hspace{2.5cm}.\\
+		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.
+	\end{tabbing}
+%
+\subsection*{Schlauchen}
+	\begin{tabbing}
+		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+		\> \hspace{4cm}, den \hspace{4cm} um \hspace{2.5cm} Uhr.\\
+		\> Zuckergabe: \hspace{3.2cm} g/l\\
+		\> Gesamtabfüllung: \> \> \> \> \> 0,33l Flasche\\
+		\> \> \> \> \> \> 0,5l Flasche\\
+		\> \> \> \> \> \> 0,75l Flasche\\
+		\> Kommentar: \>\>\> \rule[-0.2cm]{13cm}{1pt}\\
+		\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+		\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+		\> \>  \rule[-0.2cm]{15.3cm}{1pt}		
+	\end{tabbing}
+%
+\subsection*{Verkostet}
+\begin{tabbing}
+	\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+	\> Kommentar: \>\>\> \rule[-0.2cm]{13cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\		
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+	\> \>  \rule[-0.2cm]{15.3cm}{1pt}
+\end{tabbing}}
+\end{document}
