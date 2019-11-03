@@ -20,7 +20,7 @@ pageanchor,
 hyperindex,
 hidelinks,
 pdffitwindow,
-pdftitle={Sudprotokoll: Dinkelbier / Industriebier},
+pdftitle={Sudprotokoll: Schwarzer Doppelbock},
 pdfauthor={Stephan Mertens},
 ]{hyperref}
 \usepackage{bookmark}
@@ -35,14 +35,20 @@ pdfauthor={Stephan Mertens},
 \usepackage{textcomp}
 \usepackage{wasysym}
 \usepackage{marvosym}
+\usepackage{siunitx}
+\sisetup{locale = DE}
+\DeclareSIUnit\plato{^\circ P}
+\DeclareSIUnit\peralpha{\%\,\alpha}
+\DeclareSIUnit\ibu{IBU}
+\DeclareSIUnit\pervol{\%\,Vol}
 
 \begin{document}
 %Header
 	\begin{minipage}[c]{0.70\textwidth}
-		\section*{\hspace{-.4cm}Sudprotokoll: Sinkelbier / Industriebier}
+		\section*{\hspace{-.4cm}Sudprotokoll: Schwarzer Doppelbock}
 	\end{minipage}
 	\begin{minipage}[c]{0.29\textwidth}
-		\subsection*{am 04. Juni 2016}
+		\subsection*{am }
 	\end{minipage}
 	\rule{\textwidth}{1pt}
 %
@@ -51,87 +57,97 @@ pdfauthor={Stephan Mertens},
 %Schuettung
 \paragraph{Schüttung:}
 	\begin{tabular}[t]{m{8cm} m{2cm} m{1cm}}
-		Dinkelmalz & 1,2 & kg \bigstrut\\
-		Münchner Malz & 0,6 & kg \bigstrut\\
-		Pilsener Malz & 0,5 & kg \bigstrut\\
-		Cara Hell & 0,1 & kg \bigstrut\\\hline
-		Gesamtschüttung & 2,4 & kg\bigstrut
+		Münchner Malz & \num{3,0} & \si{\kilogram} \bigstrut\\
+		Pilsener Malz & \num{1,2} & \si{\kilogram} \bigstrut\\
+		Cara Münch & \num{0,3} & \si{\kilogram} \bigstrut\\
+		Sauermalz & \num{0,1} & \si{\kilogram} \bigstrut\\\hline
+		Hauptschüttung & \num{4,6} & \si{\kilogram} \bigstrut\\
+		&&\\
+		Röstmalz & \num{0,15} & \si{\kilogram} \bigstrut\\
+		Röstgerste & \num{0,1} & \si{\kilogram} \bigstrut\\ 
+		Haferflocken & \num{0,1} & \si{\kilogram} \bigstrut\\ \hline
+		Zweitschüttung & \num{0,35} & \si{\kilogram} \bigstrut\\
+		&&\\\hline\hline
+		Gesamtschüttung & \num{4,95} & \si{\kilogram} \bigstrut
 	\end{tabular}\\
 
 \vspace{.25cm}
-\hspace{1cm}Angestrebte Stammwürze: 13 °P
+\hspace{1cm}Angestrebte Stammwürze: \SI{22}{\plato}
 %
 %Hopfung
 \paragraph{Hopfung:}
 	\begin{tabular}[t]{m{2.5cm} m{5cm} m{0.5cm} m{1cm} m{0.5cm} m{1cm}}
-		Bitterhopen: &  &  & g &  & \% $\alpha$ \\
-		Aromahopfen: & Tettnanger & & g &  &  \% $\alpha$
+		Bitterhopen: & Northern Brewer & \num{17} & \si{\gram} & \num{9,4} & \si{\peralpha} \\
+		Aromahopfen: & Hallertauer Tradition &\num{12} & \si{\gram} & \num{6,6} &  \si{\peralpha}
 	\end{tabular}\\
 
 \vspace{.25cm}
-\hspace{1cm}Errechnete Bittere: 15 IBU
+\hspace{1cm}Errechnete Bittere: \SI{30}{\ibu}
 %
 %Hefe
 \paragraph{Hefe:}
-	Safbrew WB-06
+	Brewferm Lager
 
 \onehalfspacing{
 %
 %Sudverlauf
-\subsection*{Sudverlauf - Infusionsverfahren}	
+\subsection*{Sudverlauf - Kombinationsverfahren}	
 %
 %Maischen
 \paragraph{Maischen:}
 	\begin{tabbing}\hspace{1cm} \=
 		\hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> 7l vorlegen bei 55$^\circ C$.\\
+		\> \SI{8}{\litre} vorlegen bei \SI{52}{\degreeCelsius}.\\
 		%\> \> Aufheizen auf 35$^ \circ C$.\\
 		%\> \textit{Gummi/Glucanaserast} für Minuten von - Uhr.\\
 		%\> \> Aufheizen auf 44$^\circ C$.\\
 		%\> \textit{Ferulasäurerast} für Minuten von - Uhr.\\
-		%\> \> Aufheizen auf 55$^\circ C$.\\
-		\> \textit{Eiweißrast} für 15 Minuten von  Uhr.\\
-		\> \> Aufheizen auf 64$^\circ C$\\
-		\> \textit{Maltose-/$\beta$-Amylaserast} für 35 Minuten von  Uhr.\\
-		\> \> Aufheizen auf 72$^\circ C$.\\
-		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von  Uhr.\\
+		%\> \> Aufheizen auf 52$^\circ C$.\\
+		\> \textit{Eiweißrast} für 30 Minuten von  Uhr.\\
+		\> \> Aufheizen auf \SI{64}{\degreeCelsius}\\
+		\> \textit{Maltose-/$\beta$-Amylaserast} für 60 Minuten von Uhr.\\
+		\> \> Aufheizen auf \SI{72}{\degreeCelsius} mit Dekoktion.\\
+		\> \> Volumen Dichmaische: $ V_{tot} \cdot \frac{\vartheta_2 - \vartheta_1}{\vartheta_b - \vartheta_1} = \SI{0}{\litre} \cdot \frac{\SI{72}{\degreeCelsius} - \SI{64}{\degreeCelsius}}{\SI{100}{\degreeCelsius} - \SI{64}{\degreeCelsius}} = \num{0,22} \cdot V_{tot}$\\
+		\> \> Dickmaische für 15 Minuten kochen von Uhr.\\
+		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von Uhr.\\
 		\> \> Zugabe der zweiten Schüttung.\\
-		\> \> \> Jodprobe: \> \> \CheckedBox \ positiv \> \> \Square \ negativ\\
-		\> \> Aufheizen auf 78$^\circ C$.\\\\
+		\> \> \> Jodprobe: \> \> \Square \ positiv \> \> \Square \ negativ\\
+		\> \> Aufheizen auf \SI{78}{\degreeCelsius}.\\
+		\> Abmaischen um Uhr.\\\\
 		%
-		\> Kommentar: \>\>\> \\
+		\> Kommentar: \>\>\> 
 	\end{tabbing}
 %
 %Läutern
-\paragraph{Läutern:} von 20:15 - 22:30 Uhr.
+\paragraph{Läutern:} von  Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \kill
 		\> 1l Wasser vorlegen.\\
-		\> \> 1. Nachguss: \> \> 7 l\\
-		\> \> 2. Nachguss: \> \> 5 l\\
+		\> \> 1. Nachguss: \> \> \> \SI{4}{\litre}\\
+		\> \> 2. Nachguss: \> \> \> \SI{2}{\litre}\\
 		\> \> \> Aufhacken: \> \> \Square \ ja \> \> \Square \ nein\\
-		%\> \> 3. Nachguss: \> \> 2 l\\
-		\> Würze: \> \> \> $^\circ P$ \> bei \> $^\circ C$ \> $\Rightarrow$ \> $^\circ P$\\
-		\> Glattwasser: \> \> \> $^\circ P$ \> bei \> $^\circ C$ \> $\Rightarrow$ \> $^\circ P$\\\\
-		\> Kommentar: \>\>\> \\
+		\> \> 3. Nachguss: \> \> \> \SI{2}{\litre}\\
+		\> Würze: \> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\
+		\> Glattwasser: \> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\\\
+		\> Kommentar: \>\>\> 
 	\end{tabbing}
 %
 %Würzekochung
-\paragraph{Würzekochung:} für 90 Minuten von  Uhr.
+\paragraph{Würzekochung:} für 90 Minuten von Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Kommentar: \> \> \>\\
+		\> Kommentar: \> \> \> 
 	\end{tabbing}
 %
 %Whirpool
-\paragraph{Whirpoolrast:} von  Uhr.
+\paragraph{Whirpoolrast:} von Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Kommentar: \>\>\> . \\
-		\> \> \> ca. $^\circ P$ \> \> bei \> $^\circ C$ \> $\Rightarrow$ \> $^\circ P$\\
-		\> \> Verdünnen: \> \> \> \> \> ($l \cdot$$ ^\circ P)/$($^\circ P)=$ $l$\\
-		\> \> Sudhausausbeute: \> \> \> \> \>  \% mit l\\
-		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \% Vol.
+		\> Kommentar: \>\>\> \\
+		\> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\
+		\> \> Verdünnen: \> \> \> \> \> ($\SI{0}{\litre} \cdot \SI{0}{\plato})/(\SI{0}{\plato})= \SI{0}{\litre}$\\
+		\> \> Sudhausausbeute: \> \> \> \> \> \SI{0}{\percent} mit \SI{10}{\litre}\\
+		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \SI{0}{\pervol}.
 	\end{tabbing}
 %
 %Hefegabe
@@ -140,14 +156,14 @@ pdfauthor={Stephan Mertens},
 \subsection*{Gärverlauf}
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Angestellt am , den   um  Uhr.\\
-		\> \> ungefähre Gärtemperatur  $^\circ C$.\\
+		\> Angestellt am , den \today \ um  Uhr.\\
+		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
 		\> Erste Kräusen am \hspace{4cm}, Tag Nr.\hspace{2.5cm} .\\
-		\> \> ungefähre Gärtemperatur \hspace{2.5cm}$^\circ C$.\\
+		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
 		\> Kräusen fallen zusammen am \hspace{4cm}, Tag Nr. \hspace{2.5cm}.\\
-		\> \> ungefähre Gärtemperatur \hspace{2.5cm}$^\circ C$.\\
+		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
 		\> Gärung beendet am \hspace{4cm}, Tag Nr. \hspace{2.5cm}.\\
-		\> \> ungefähre Gärtemperatur \hspace{2.5cm}$^\circ C$.
+		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.
 	\end{tabbing}
 %
 \subsection*{Schlauchen}

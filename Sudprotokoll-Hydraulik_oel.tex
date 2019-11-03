@@ -1,0 +1,158 @@
+\documentclass[12pt,oneside,a4paper]{scrartcl}
+%Einstellungen der Seitenraender
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[pdftex]{graphicx}
+
+%Zum Erstellen von Diagrammen
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usepackage{bigstrut}
+
+%Hyperlinks innerhalb des PDF Dokuments
+\usepackage[bookmarks,
+ngerman,
+pageanchor,
+hyperindex,
+hidelinks,
+pdffitwindow,
+pdftitle={Sudprotokoll: Pale Ale / Hydraulik-\O{}l},
+pdfauthor={Stephan Mertens},
+]{hyperref}
+\usepackage{bookmark}
+
+%um text einzufaerben
+\usepackage{color}
+
+%tabular zeug
+\usepackage{dcolumn}
+
+% Fuer zusaaetzliche Zeichen
+\usepackage{textcomp}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+\begin{document}
+	%Header
+	\begin{minipage}[c]{0.70\textwidth}
+		\section*{\hspace{-.4cm}Sudprotokoll: Pale Ale / Hydraulik-\O{}l}
+	\end{minipage}
+	\begin{minipage}[c]{0.29\textwidth}
+		\subsection*{am 26. August 2016}
+	\end{minipage}
+	\rule{\textwidth}{1pt}\vspace{5mm}
+	%
+	\subsection*{Zutaten}
+	%
+	%Schuettung
+	\paragraph{Schüttung:}
+	\begin{tabular}[t]{m{8cm} m{2cm} m{1cm}}
+		Pale Ale Malt & 0,6 & kg \bigstrut\\
+		Münchner Malz & 1,2 & kg \bigstrut\\\hline
+		Gesamtschüttung & 1,8 & kg\bigstrut
+	\end{tabular}\\
+	
+	\vspace{.25cm}
+	\hspace{1cm}Angestrebte Stammwürze: 11,5\,°P
+	%
+	%Hopfung
+	\paragraph{Hopfung:}
+	\begin{tabular}[t]{m{2.5cm} m{5cm} m{0.5cm} m{1cm} m{0.5cm} m{1cm}}
+		Bitterhopen: & Magnum & 9 & g &  & 12,2\,\%$\alpha$ \\%28,6
+		Aromahopfen: & Simcoe & 15 & g &  & 12,9\,\%$\alpha$ \\%8,6
+		Dryhopping: & Simcoe & 30 & g & & 12,9\,\%$\alpha$
+	\end{tabular}\\
+	
+	\vspace{.25cm}
+	\hspace{1cm}Errechnete Bittere: 37,5\,IBU
+	%
+	%Hefe
+	\paragraph{Hefe:}
+	Safale US-05
+	
+	\onehalfspacing{
+		%
+		%Sudverlauf
+		\subsection*{Sudverlauf - Infusionsverfahren (hoch-kurz)}	
+		%
+		%Maischen
+		\paragraph{Maischen:}
+		\begin{tabbing}\hspace{1cm} \=
+			\hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+			\> 7\,l vorlegen bei 64\,°C\\
+			\> \textit{Maltose-/$\beta$-Amylaserast} für 45 Minuten von 20:15 -- 21:02 Uhr.\\
+			\> \> Aufheizen auf 72\,°C.\\
+			\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von 21:09 -- 21:50 Uhr.\\
+			\> \> \> Jodprobe: \> \> \Square \ positiv \> \> \CheckedBox \ negativ\\
+			\> \> Aufheizen auf 78\,°C.\\\\
+			%
+			\> Kommentar: \>\>\>Direkt beim Einmaischen überhitzt auf 72\,°C. Ein paar Eiswürfel reinge-\\
+			\>\>\>\>worfen und dann drauf geschissen.
+		\end{tabbing}
+		%
+		%Läutern
+		\paragraph{Läutern:} von 22:02 -- 23:10 Uhr.
+		\begin{tabbing}
+			\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \kill
+			\> 1l Wasser vorlegen.\\
+			\> \> 1. Nachguss: \> \> 6 l\\
+			\> \> 2. Nachguss: \> \> 5 l\\
+			\> \> \> Aufhacken: \> \> \CheckedBox \ ja \> \> \Square \ nein\\
+			\> Würze: \> \> \> 5,5\,°P \> bei \>64\,°C \> $\Rightarrow$ \> 10,6\,°P\\
+		\end{tabbing}
+		%
+		%Würzekochung
+		\paragraph{Würzekochung:} für 80 Minuten von 23:20 -- 0:40 Uhr.\\
+		%Whirpool
+		\paragraph{Whirpoolrast:} von 0:40 -- 1:00 Uhr.
+		\begin{tabbing}
+			\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+			\> Kommentar: \>\>\> Hat sich nicht so schön geklärt. Trubkegel trotzdem schön und Fest. NT.\\
+			\> \> Ausschlagwürze: \> \> \> \> \> ca. 7,25\,°P bei 67\,°C $\Rightarrow$ 13,3\,°P\\
+			\> \> Verdünnen: \> \> \> \> \> ($8l \cdot$$ 13,3^\circ P)/$($11,5^\circ P)= 9,3l$\\
+			\> \> Sudhausausbeute: \> \> \> \> \>  60\,\% mit 9,3\,l\\
+			\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> 5,2\,\% Vol.
+		\end{tabbing}
+		%
+		%Hefegabe
+		\subsection*{Gärung}
+		\paragraph{Hefegabe:} und $O_2$-Gabe um 9:20 Uhr.
+		\paragraph{Dryhopping:} 30\,g Simcoe für 7 Tage von .
+		%
+		\paragraph{Gärverlauf:}
+		\begin{tabbing}
+			\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+			\> Angestellt am Samstag, den 27.08. um 9:20 Uhr.\\
+			\> \> ungefähre Gärtemperatur  21\,°C.\\
+			\> Erste Kräusen am Samstag,  Tag Nr. 0.\\
+			\> \> ungefähre Gärtemperatur 26\,°C.\\
+			\> Kräusen fallen zusammen am Samstag, Tag Nr. 0.\\
+			\> \> ungefähre Gärtemperatur 26\,°C.\\
+			\> \> 2 Runden Waschmaschine und dannach gabs keine Kräusen mehr\\
+			\> Gärung beendet am ...................., Tag Nr. .......... .\\
+			\> \> ungefähre Gärtemperatur ..........\,°C.\\
+			\> Hopfengabe am ...................., Tag Nr. .......... .\\
+			\> Hopfen entfernen am ...................., Tag Nr. .......... .
+		\end{tabbing}
+		%
+		\subsection*{Schlauchen}
+		\begin{tabbing}
+			\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
+			\> ...................., den  .................... um .......... Uhr.\\
+			\> Zuckergabe: \> \> \> \> ..........g/l\\
+			\> Gesamtabfüllung: \> \> \> \> .......... 0,5\,l Flasche\\
+			\> \> \> \> \> .......... 0,75\,l Flasche\\
+			\\
+			\> Kommentar: \>\>\>\rule[-0.2cm]{13cm}{1pt}\\
+			\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+			\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+			\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+			\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+			\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
+			\> \>  \rule[-0.2cm]{15.3cm}{1pt}			
+		\end{tabbing}
+	\end{document}
