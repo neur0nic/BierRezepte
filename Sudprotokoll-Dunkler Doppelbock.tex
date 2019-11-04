@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{setspace}
 \usepackage[pdftex]{graphicx}
+\pagenumbering{gobble}
 
 %Zum Erstellen von Diagrammen
 \usepackage{tikz}
@@ -36,11 +37,13 @@ pdfauthor={Stephan Mertens},
 \usepackage{wasysym}
 \usepackage{marvosym}
 \usepackage{siunitx}
-\sisetup{locale = DE}
+\sisetup{locale = DE,
+	per-mode=symbol-or-fraction}
 \DeclareSIUnit\plato{^\circ P}
 \DeclareSIUnit\peralpha{\%\,\alpha}
 \DeclareSIUnit\ibu{IBU}
 \DeclareSIUnit\pervol{\%\,Vol}
+\newcommand{\Zeitluecke}{\rule[-0.1cm]{1.8cm}{0.5pt}}
 
 \begin{document}
 %Header
@@ -50,7 +53,7 @@ pdfauthor={Stephan Mertens},
 	\begin{minipage}[c]{0.29\textwidth}
 		\subsection*{am }
 	\end{minipage}
-	\rule{\textwidth}{1pt}
+	\rule{\textwidth}{2pt}
 %
 \subsection*{Zutaten}
 %
@@ -71,16 +74,16 @@ pdfauthor={Stephan Mertens},
 \paragraph{Hopfung:}
 	\begin{tabular}[t]{m{2.5cm} m{5cm} m{0.5cm} m{1cm} m{0.5cm} m{1cm}}
 		Bitterhopen: & Hallertauer Tradition & \num{15} & \si{\gram} & \num{6,6} & \si{\peralpha} \\
-		Aromahopfen: &  &\num{} & \si{\gram} & \num{} &  \si{\peralpha}
+		Aromahopfen: & Tettnanger &\num{15} & \si{\gram} & \num{3,3} &  \si{\peralpha}
 	\end{tabular}\\
 
 \vspace{.25cm}
-\hspace{1cm}Errechnete Bittere: \SI{}{\ibu}
+\hspace{1cm}Errechnete Bittere: \SI{20,2}{\ibu}
 %
 %Hefe
 \paragraph{Hefe:}
 	Brewferm Lager
-
+\vspace{1cm}
 \onehalfspacing{
 %
 %Sudverlauf
@@ -96,23 +99,27 @@ pdfauthor={Stephan Mertens},
 		%\> \> Aufheizen auf 44$^\circ C$.\\
 		%\> \textit{Ferulasäurerast} für Minuten von - Uhr.\\
 		%\> \> Aufheizen auf 52$^\circ C$.\\
-		\> \textit{Eiweißrast} für 15 Minuten von ------ Uhr.\\
+		\> \textit{Eiweißrast} für 15 Minuten von \Zeitluecke -- \Zeitluecke Uhr.\\
 		\> \> Aufheizen auf \SI{64}{\degreeCelsius}\\
-		\> \textit{Maltose-/$\beta$-Amylaserast} für 60 Minuten von ------ Uhr.\\
+		\> \textit{Maltose-/$\beta$-Amylaserast} für 45 Minuten von \Zeitluecke -- \Zeitluecke Uhr.\\
 		\> \> Aufheizen auf \SI{72}{\degreeCelsius} mit Dekoktion.\\
-		\> \> Volumen Dichmaische: $ V_{tot} \cdot \frac{\vartheta_2 - \vartheta_1}{\vartheta_b - \vartheta_1} = \SI{0}{\litre} \cdot \frac{\SI{72}{\degreeCelsius} - \SI{64}{\degreeCelsius}}{\SI{100}{\degreeCelsius} - \SI{64}{\degreeCelsius}} = \num{0,22} \cdot V_{tot}$\\
-		\> \> Dickmaische für 15 Minuten kochen von ------ Uhr.\\
-		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von ------ Uhr.\\
+		\> \> Volumen Dichmaische: $ V_{tot} \cdot \frac{\vartheta_2 - \vartheta_1}{\vartheta_b - \vartheta_1} = \rule[-0.1cm]{1cm}{0.5pt}\si{\litre} \cdot \frac{\SI{72}{\degreeCelsius} - \SI{64}{\degreeCelsius}}{\SI{100}{\degreeCelsius} - \SI{64}{\degreeCelsius}} = \num{0,22} \cdot V_{tot} = \rule[-0.1cm]{1cm}{0.5pt}\si{\litre}$\\
+		\> \> Dickmaische für 15 Minuten kochen von \Zeitluecke -- \Zeitluecke Uhr.\\
+		\> \textit{Verzuckerungs-/$\alpha$-Amylaserast} bis zur Verzuckerung von \Zeitluecke -- \Zeitluecke Uhr.\\
 %		\> \> Zugabe der zweiten Schüttung.\\
 		\> \> \> Jodprobe: \> \> \Square \ positiv \> \> \Square \ negativ\\
 		\> \> Aufheizen auf \SI{78}{\degreeCelsius}.\\
-		\> Abmaischen um ------ Uhr.\\\\
+		\> Abmaischen um \Zeitluecke Uhr.\\\\
 		%
-		\> Kommentar: \>\>\> 
+		\> Kommentar: \>\>\> \rule[-0.1cm]{13cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}	
 	\end{tabbing}
 %
 %Läutern
-\paragraph{Läutern:} von ------ Uhr.
+\pagebreak
+\paragraph{Läutern:} von \Zeitluecke -- \Zeitluecke Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \=\hspace{1cm} \= \kill
 		\> 1l Wasser vorlegen.\\
@@ -120,81 +127,87 @@ pdfauthor={Stephan Mertens},
 		\> \> 2. Nachguss: \> \> \> \SI{2}{\litre}\\
 		\> \> \> Aufhacken: \> \> \Square \ ja \> \> \Square \ nein\\
 		\> \> 3. Nachguss: \> \> \> \SI{2}{\litre}\\
-		\> Würze: \> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\
-		\> Glattwasser: \> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\\\
-		\> Kommentar: \>\>\> 
+		\> Würze: \> \> \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\plato} \> bei \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\degreeCelsius} \> $\Rightarrow$ \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\plato}\\
+		\> Glattwasser: \> \> \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\plato} \> bei \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\degreeCelsius} \> $\Rightarrow$ \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\plato}\\\\
+		\> Kommentar: \>\>\> \rule[-0.1cm]{13cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}	
 	\end{tabbing}
 %
 %Würzekochung
-\paragraph{Würzekochung:} für 70 Minuten von ------ Uhr.
+\paragraph{Würzekochung:} für 70 Minuten von \Zeitluecke -- \Zeitluecke Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Kommentar: \> \> \> 
+		\> Kommentar: \>\>\> \rule[-0.1cm]{13cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+			\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}		
 	\end{tabbing}
-%
+%\rule[-0.1cm]{1cm}{0.5pt}
 %Whirpool
-\paragraph{Whirpoolrast:} von ------ Uhr.
+\paragraph{Whirpoolrast:} von \Zeitluecke -- \Zeitluecke Uhr.
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Kommentar: \>\>\> \\
-		\> \> \> \SI{0}{\plato} \> bei \> \SI{0}{\degreeCelsius} \> $\Rightarrow$ \> \SI{0}{\plato}\\
-		\> \> Verdünnen: \> \> \> \> \> ($\SI{0}{\litre} \cdot \SI{0}{\plato})/(\SI{0}{\plato})= \SI{0}{\litre}$\\
-		\> \> Sudhausausbeute: \> \> \> \> \> \SI{0}{\percent} mit \SI{10}{\litre}\\
-		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \SI{0}{\pervol}.
+		\> \> \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\plato} \> bei \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\degreeCelsius} \> $\Rightarrow$ \> \rule[-0.1cm]{0.6cm}{0.5pt}\si{\plato}\\
+		\> \> Verdünnen: \> \> \> \> \> ($\rule[-0.1cm]{1cm}{0.5pt}\si{\litre} \cdot \rule[-0.1cm]{1cm}{0.5pt}\si{\plato})/(\rule[-0.1cm]{1cm}{0.5pt}\si{\plato})= \rule[-0.1cm]{1cm}{0.5pt}\si{\litre}$\\
+		\> \> Sudhausausbeute: \> \> \> \> \> \rule[-0.1cm]{1cm}{0.5pt}\si{\percent} mit \SI{10}{\litre}\\
+		\> \> Geschätzter Alkoholgehalt: \> \> \> \> \> \rule[-0.1cm]{1cm}{0.5pt}\si{\pervol}.\\
+				\> Kommentar: \>\>\> \rule[-0.1cm]{13cm}{0.5pt}\\
+		\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+		\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+		\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}
 	\end{tabbing}
 %
 %Hefegabe
-\paragraph{Hefegabe} und $O_2$-Gabe um ------ Uhr.
+\paragraph{Hefegabe:} und $O_2$-Gabe um \Zeitluecke Uhr.
 %
+\pagebreak
 \subsection*{Gärverlauf}
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> Angestellt am , den \today \ um  Uhr.\\
-		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
-		\> Erste Kräusen am \hspace{4cm}, Tag Nr.\hspace{2.5cm} .\\
-		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
-		\> Kräusen fallen zusammen am \hspace{4cm}, Tag Nr. \hspace{2.5cm}.\\
-		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.\\
-		\> Gärung beendet am \hspace{4cm}, Tag Nr. \hspace{2.5cm}.\\
-		\> \> ungefähre Gärtemperatur \SI{0}{\degreeCelsius}.
+		\> Angestellt am \rule[-0.1cm]{3cm}{0.5pt}, den \rule[-0.1cm]{4cm}{0.5pt} \ um \Zeitluecke Uhr.\\
+		\> \> ungefähre Gärtemperatur \rule[-0.1cm]{1cm}{0.5pt}\si{\degreeCelsius}.\\
+		\> Erste Kräusen am \rule[-0.1cm]{4cm}{0.5pt}, Tag Nr.\rule[-0.1cm]{1cm}{0.5pt} .\\
+		\> \> ungefähre Gärtemperatur \rule[-0.1cm]{1cm}{0.5pt}\si{\degreeCelsius}.\\
+		\> Kräusen fallen zusammen am \rule[-0.1cm]{4cm}{0.5pt}, Tag Nr. \rule[-0.1cm]{1cm}{0.5pt}.\\
+		\> \> ungefähre Gärtemperatur \rule[-0.1cm]{1cm}{0.5pt}\si{\degreeCelsius}.\\
+		\> Gärung beendet am \rule[-0.1cm]{4cm}{0.5pt}, Tag Nr. \rule[-0.1cm]{1cm}{0.5pt}.\\
+		\> \> ungefähre Gärtemperatur \rule[-0.1cm]{1cm}{0.5pt}\si{\degreeCelsius}.
 	\end{tabbing}
 %
 \subsection*{Schlauchen}
 	\begin{tabbing}
 		\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-		\> \hspace{4cm}, den \hspace{4cm} um \hspace{2.5cm} Uhr.\\
-		\> Zuckergabe: \hspace{3.2cm} g/l\\
-		\> Gesamtabfüllung: \> \> \> \> \> 0,33l Flasche\\
-		\> \> \> \> \> \> 0,5l Flasche\\
-		\> \> \> \> \> \> 0,75l Flasche\\
-		\> Kommentar: \>\>\> \rule[-0.2cm]{13cm}{1pt}\\
-		\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-		\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-		\> \>  \rule[-0.2cm]{15.3cm}{1pt}		
+		\> \rule[-0.1cm]{4cm}{0.5pt}, den \rule[-0.1cm]{4cm}{0.5pt} um \Zeitluecke Uhr.\\
+		\> Zuckergabe: \>\>\>\>\rule[-0.1cm]{1cm}{0.5pt} \>\si{\gram\per\litre}\\
+		\> Gesamtabfüllung: \> \> \> \> \rule[-0.1cm]{1cm}{0.5pt}\> \SI{0,33}{\litre} \>Flasche\\
+		\> \> \> \> \>\rule[-0.1cm]{1cm}{0.5pt} \> \SI{0,5}{\litre} \>Flasche\\
+		\> \> \> \> \> \rule[-0.1cm]{1cm}{0.5pt}\> \SI{0,75}{\litre} \>Flasche\\
+		\> Kommentar: \>\>\> \rule[-0.1cm]{13cm}{0.5pt}\\
+		\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+		\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+		\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}		
 	\end{tabbing}
 %
-\subsection*{Verkostet}
+\subsection*{Verkosten}
 \begin{tabbing}
 	\hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \hspace{1cm} \= \kill
-	\> Kommentar: \>\>\> \rule[-0.2cm]{13cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\		
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}\\
-	\> \>  \rule[-0.2cm]{15.3cm}{1pt}
+	\> Kommentar: \>\>\> \rule[-0.1cm]{13cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\		
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}\\
+	\> \>  \rule[-0.1cm]{15.3cm}{0.5pt}
 \end{tabbing}}
 \end{document}
